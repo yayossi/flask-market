@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Market_Page
+{% endblock %}
+
+
+{% block content %}
+<body class="text-center">
+  <div class="continer">
+    <form method="POST" class="form-register" style="color:black">
+      {{ form.hidden_tag() }}
+      <h1 class="h3 mb-3 font-weight-normal">
+        Please enter an Item</h1>
+      <br>
+      {{ form.id.label() }}
+      {{ form.id(class="form-control", placeholder="id") }}
+
+      {{ form.name.label() }}
+      {{ form.name(class="form-control", placeholder="name") }}
+
+      {{ form.price.label() }}
+      {{ form.price(class="form-control", placeholder="price") }}
+
+      <br>
+      {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+
+    </form>
+  </div>
+
+ </body>
+
+{% endblock %}
+
+
+{% block style %}
+        body {
+        background-color: #654789;
+        color: white
+        }
+{% endblock %}
+
+

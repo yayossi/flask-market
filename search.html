@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Search_Page
+{% endblock %}
+
+
+{% block content %}
+
+    <h1> List of Item</h1>
+        <br>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+            <!-- the Columns  -->
+            <th scope="col">Id</th>
+            <th scope="col">Price</th>
+            <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- the rows-->
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name}}</td>
+                    <td>{{ item.price}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+<h1> Search item</h1>
+<form class=""form inline mt-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="search by name///" name="q">
+    <button class=""btn btn-outline-success my-2 my-sm-0" type="submit">Search</submit>
+</form>
+
+
+{% endblock %}
+
+
+{% block style %}
+        body {
+        background-color: #958467;
+        color: white
+        }
+{% endblock %}
+
+
